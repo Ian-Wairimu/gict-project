@@ -4,9 +4,9 @@
     flex-direction: row;
     justify-content: flex-start;
     align-self: center;
-    padding: 20px 20px;
+    padding: 30px 40px;
     margin: 0;
-    height: 300px;
+    height: 200px;
     background-color: #BF54B8;
     color: white;
 }
@@ -32,7 +32,7 @@
     margin-bottom: 2px;
 }
 .ft--ul > li {
-    font-weight: 500;
+    font-weight: 300;
     color: white;
     list-style-type: none;
     font-size: 1.1em;
@@ -40,11 +40,11 @@
 .ft--copyright {
     margin-left: auto;
     align-self: flex-end;
-    width: 25%;
+    width: 20%;
     height: 50%;
 }
 .ft--copyright > h2 {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.2em;
 }
 .ft--btn {
