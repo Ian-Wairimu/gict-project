@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
-    height: 50vh;
     align-items: center;
 }
 .submit--form > form > input {
@@ -24,4 +23,17 @@
     font-weight: 700;
     font-size: 1em;
     border-radius: 10px;
+}
+.confirmation--message {
+    display: block;
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 30%;
+    padding: 12px;
 }

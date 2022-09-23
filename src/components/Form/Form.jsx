@@ -11,7 +11,9 @@ export const Form = () => {
         phone: "",
         address: "",
 
-    })
+    });
+    const[confirmation, setConfirmation] = useState(false)
+    const[message, setMessage] = useState("");
     const handleChange = (event) => {
         const {name, value} = event.target;
         setData((preValue) => {
@@ -32,6 +34,8 @@ export const Form = () => {
                 phone: "",
                 address: ""
             });
+            setConfirmation(true)
+            setMessage(`thank you ${data.fullName} your data has been successfully submitted `)
         }catch (e) {
             console.log(e.message)
         }
@@ -45,6 +49,11 @@ export const Form = () => {
   return (
       <>
           <div className="submit--form">
+              {
+                  confirmation ? <div className="confirmation--message">
+                      {message}
+                  </div> : ("")
+              }
               <form onSubmit={onSubmit}>
                   <input
                       type="text"
