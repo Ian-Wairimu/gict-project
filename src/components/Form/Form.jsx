@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Button} from "../Button/Button.jsx";
 import "./form.css";
-import SubmitService from "../../SubmitService.js";
+import axios from "axios";
 
 export const Form = () => {
     //store the data in form of an object
@@ -21,35 +21,25 @@ export const Form = () => {
             }
         })
     }
-    const handleClick = () => {
-        // console.log(data)
-        SubmitService.create(JSON.stringify(data)).then(
-            (returnData) => {
-                setData(returnData)
-                setData("")
-            }
-        ).catch(e => {
-            alert(
-                `There was an error when parsing your data:
-                 ${data.fullName}
-                 ${data.email}
-                 ${data.phone}
-                 ${data.address}`
-            )
+    const onSubmit = async(e) => {
+        try {
+            e.preventDefault();
+            await axios.post('/api/dummy/', data)
+            console.log("your data has been submitted")
+        }catch (e) {
             console.log(e.message)
-        })
-    }
+        }
+    };
     const button = [
         {
             name: "Submit",
             className: "submit--btn",
-            onclick: handleClick,
         }
     ]
   return (
       <>
           <div className="submit--form">
-              <form onSubmit={(e) => e.preventDefault()}>
+              <form onSubmit={onSubmit}>
                   <input
                       type="text"
                       name="fullName"
@@ -76,7 +66,7 @@ export const Form = () => {
                       placeholder="Address" />
                   {
                    button.map((v, i) => {
-                       return <Button key={i} name={v.name} className={v.className} onClick={v.onclick}/>
+                       return <Button key={i} name={v.name} className={v.className}/>
                    })
                   }
               </form>
