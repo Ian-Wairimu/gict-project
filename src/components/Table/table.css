@@ -18,3 +18,13 @@ thead {
 tbody:nth-child(even) {
     background-color: #dddddd;
 }
+.edit--button {
+    border: none;
+    cursor: pointer;
+    background-color: #BF54B8;
+    color: white;
+    padding: 10px 30px;
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: 10px;
+}

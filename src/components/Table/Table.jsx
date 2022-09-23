@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import "./table.css";
+import {Button} from "../Button/Button";
 
 export const Table = () => {
     const[data, setData]=useState({});
@@ -32,6 +33,7 @@ export const Table = () => {
                     <td>{post.ID}</td>
                     <td>{post.Message}</td>
                     <td>{post.Age}</td>
+                    <td><Button name="Edit" className="edit--button"/></td>
                 </tbody>
     })
     return (
@@ -42,6 +44,7 @@ export const Table = () => {
                     <th>Id</th>
                     <th>Message</th>
                     <th>Age</th>
+                    <th>Edit</th>
                     </thead>
                         {renderedTable}
                 </table>
