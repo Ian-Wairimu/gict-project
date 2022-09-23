@@ -25,7 +25,7 @@ export const Table = () => {
     useEffect(() => {
         setTimeout(() => {
             getData()
-        }, 1000)
+        }, 100)
     }, [])
     const renderedTable = Object.values(data).map(post => {
         return <tbody key={post.ID}>
