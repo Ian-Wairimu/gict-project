@@ -26,6 +26,12 @@ export const Form = () => {
             e.preventDefault();
             await axios.post('/api/dummy/', data)
             console.log("your data has been submitted")
+            setData({
+                fullName: "",
+                email: "",
+                phone: "",
+                address: ""
+            });
         }catch (e) {
             console.log(e.message)
         }
