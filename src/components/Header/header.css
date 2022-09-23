@@ -1,0 +1,46 @@
+.header--con {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 60vh;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.header--con_img {
+    background-image: url("../../assets/building.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    width: 30%;
+    height: 100%;
+}
+.header--cont {
+    display: block;
+    margin-left: 50px;
+    padding: 30px 0;
+    width: 40%;
+    align-self: start;
+}
+.header--cont > h1 {
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+.header--cont > p {
+    font-weight: 300;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+.btn--header {
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #BF54B8;
+    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+}

@@ -1,0 +1,20 @@
+.con--table > table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+thead {
+    background-color: #BF54B8;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+tbody:nth-child(even) {
+    background-color: #dddddd;
+}
