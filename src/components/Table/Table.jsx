@@ -9,7 +9,7 @@ export const Table = () => {
     const token = "ALDJAK23423JKSLAJAF23423J23SAD3";
     const getData = async () => {
         try {
-            const res = await axios.get('/api/dummy/items/', {
+            const res = await axios.get('https://gict-project.vercel.app/api/dummy/items/', {
                 params: {
                     per_page: 10
                 },
