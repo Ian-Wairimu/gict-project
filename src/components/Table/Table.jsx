@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import "./table.css";
 import {Button} from "../Button/Button";
+import {EditForm} from "../Form/EditForm";
 
 export const Table = () => {
     const[data, setData]=useState({});
@@ -17,7 +18,6 @@ export const Table = () => {
                     "Access-Control-Allow-Origin": "*",
                 }
             });
-            console.log(res.data)
             setData(res.data);
         }catch (e) {
             console.log(e.message);
@@ -27,13 +27,16 @@ export const Table = () => {
         setTimeout(() => {
             getData()
         }, 100)
-    }, [])
+    }, []);
+    const onChangeData = () => {
+        return <EditForm />
+    }
     const renderedTable = Object.values(data).map(post => {
         return <tbody key={post.ID}>
                     <td>{post.ID}</td>
                     <td>{post.Message}</td>
                     <td>{post.Age}</td>
-                    <td><Button name="Edit" className="edit--button"/></td>
+                    <td><Button name="Edit" className="edit--button" onClick={onChangeData}/></td>
                 </tbody>
     })
     return (
