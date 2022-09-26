@@ -29,7 +29,7 @@ It also make post request to specified endpoints where i make the post and get r
 
 In the project directory, you can run:
 
-### `npm install  
+### `npm install`
 
 helps you install the dependencies once you have git cloned the application
 
